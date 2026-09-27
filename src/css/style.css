@@ -125,12 +125,54 @@ button {
 
 .cart svg {
   width: 25px;
+  transform-origin: center;
+  transform-box: fill-box;
 }
 
 .cart:hover svg {
   fill: gray;
 }
 
+.cart.cart-animation {
+  animation: cartFlash 0.6s ease-in-out;
+}
+
+@keyframes cartFlash {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes cartBounce {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  25% {
+    transform: scale(1.4) rotate(-8deg);
+  }
+
+  50% {
+    transform: scale(1.4) rotate(8deg);
+  }
+
+  75% {
+    transform: scale(1.2) rotate(-5deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
 /* End cart icon styles */
 
 .mission {

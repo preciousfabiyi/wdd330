@@ -18,13 +18,31 @@ function cartItemTemplate(item) {
   <a href="#">
     <h2 class="card__name">${item.Name}</h2>
   </a>
-  <p class="cart-card__color">${item.Colors[0].ColorName}</p>
+
+ 
+
   <p class="cart-card__quantity">qty: 1</p>
-  <p class="cart-card__price">$${item.FinalPrice}</p>
+<p class="cart-card__price">$${item.FinalPrice}</p>
+<button class="cart-card__remove" data-id="${item.Id}">X</button>
 </li>`;
 
   return newItem;
 }
 
+function removeFromCart(event) {
+  const productId = event.target.dataset.id;
+  const cartItems = getLocalStorage("so-cart");
+
+  const updatedCart = cartItems.filter(
+    (item) => item.Id !== productId
+  );
+
+  localStorage.setItem("so-cart", JSON.stringify(updatedCart));
+
+  renderCartContents();
+}
 renderCartContents();
+
+document.querySelector(".product-list").addEventListener("click", removeFromCart);
+
 loadHeaderFooter();
