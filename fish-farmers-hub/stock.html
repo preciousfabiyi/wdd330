@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Record and manage fish stock information with Fish Farmers Hub."
+    >
+
+    <meta name="author" content="Precious Fabiyi">
+
+    <title>Fish Stock Tracker | Fish Farmers Hub</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">🐟 Fish Farmers Hub</a>
+
+            <button
+                id="menu-button"
+                class="menu-button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+                ☰
+            </button>
+
+            <nav id="primary-navigation" class="navigation">
+                <a href="index.html">Home</a>
+                <a href="tips.html">Farming Tips</a>
+                <a href="stock.html" class="active">Stock Tracker</a>
+                <a href="contact.html">Contact & Reviews</a>
+                <a href="references.html">References</a>
+            </nav>
+
+            <button
+                id="theme-toggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Switch to dark mode"
+            >
+                🌙 Dark Mode
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-heading">
+            <h1>Fish Stock Tracker</h1>
+
+            <p>
+                Record your fish stock and keep track of important
+                information about your farm.
+            </p>
+        </section>
+
+        <section class="stock-section">
+            <h2>Add a Fish Stock Record</h2>
+
+            <form id="stock-form">
+                <div class="form-group">
+                    <label for="fish-type">Fish type</label>
+
+                    <select id="fish-type" required>
+                        <option value="">Select fish type</option>
+                        <option value="Catfish">Catfish</option>
+                        <option value="Tilapia">Tilapia</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="stock-count">Number of fish</label>
+
+                    <input
+                        type="number"
+                        id="stock-count"
+                        min="1"
+                        step="1"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="stock-date">Date recorded</label>
+
+                    <input
+                        type="date"
+                        id="stock-date"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="button">
+                    Save Stock Record
+                </button>
+            </form>
+
+            <p id="stock-message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="stock-section">
+            <h2>Your Fish Stock Records</h2>
+
+            <p id="stock-summary"></p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Fish Type</th>
+                            <th scope="col">Number of Fish</th>
+                            <th scope="col">Date Recorded</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="stock-list"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="current-year"></span> Fish Farmers Hub.
+            All rights reserved.
+        </p>
+
+        <p>Supporting better fish farming through knowledge.</p>
+    </footer>
+</body>
+</html>

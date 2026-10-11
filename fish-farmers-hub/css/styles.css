@@ -1,0 +1,757 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #006994;
+    --primary-dark: #004d70;
+    --secondary-color: #28a745;
+    --background-color: #f4f9f9;
+    --white-color: #ffffff;
+    --text-color: #263238;
+    --muted-color: #607d8b;
+    --border-color: #dce7e9;
+    --shadow: 0 5px 20px rgba(0, 60, 80, 0.08);
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.25;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 4px;
+}
+
+/* Header */
+header {
+    background-color: var(--white-color);
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 10;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navigation a {
+    color: var(--text-color);
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: var(--primary-color);
+}
+
+.menu-button {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 480px;
+    padding: 5rem 5%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 45, 65, 0.88),
+            rgba(0, 65, 85, 0.55)
+        ),
+        url('../images/fish-farm.jpg') center/cover no-repeat;
+    color: var(--white-color);
+}
+
+.hero-content {
+    max-width: 750px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.eyebrow {
+    color: #b7f5c7;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    margin-bottom: 1.25rem;
+}
+
+.hero-content > p:not(.eyebrow) {
+    font-size: 1.15rem;
+    max-width: 620px;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 0.9rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 800;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Introduction */
+.introduction {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.introduction p {
+    color: var(--muted-color);
+    font-size: 1.1rem;
+}
+
+/* Features */
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5% 5rem;
+}
+
+.features > h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background-color: var(--white-color);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+    color: var(--muted-color);
+}
+
+.feature-card a {
+    font-weight: 800;
+}
+
+/* Call to Action */
+.call-to-action {
+    padding: 4rem 5%;
+    background-color: #e4f2f5;
+    text-align: center;
+}
+
+.call-to-action p {
+    color: var(--muted-color);
+}
+
+/* Footer */
+footer {
+    background-color: #003b50;
+    color: var(--white-color);
+    text-align: center;
+    padding: 2rem 5%;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+    .feature-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 700px) {
+    .header-content {
+        flex-wrap: wrap;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+    .navigation a {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 0;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 4rem 6%;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+/* Dark Mode Button */
+.theme-toggle {
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--white-color);
+    color: var(--text-color);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Dark Theme */
+body.dark-mode {
+    --background-color: #121e24;
+    --white-color: #1d2c34;
+    --text-color: #edf4f6;
+    --muted-color: #c0cdd2;
+    --border-color: #3b505b;
+    --shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .call-to-action {
+    background-color: #203b47;
+}
+
+body.dark-mode .navigation a {
+    color: var(--text-color);
+}
+
+body.dark-mode .navigation a:hover,
+body.dark-mode .navigation a.active {
+    color: #7dd3fc;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #263b45;
+    color: var(--text-color);
+}
+
+body.dark-mode .feature-card {
+    border-color: var(--border-color);
+}
+
+/* Mobile Layout for Theme Button */
+@media (max-width: 700px) {
+    .theme-toggle {
+        width: 100%;
+    }
+}
+/* Farming Tips Page */
+.page-heading {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #e4f2f5;
+}
+
+.page-heading h1 {
+    color: var(--primary-color);
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.page-heading p {
+    color: var(--muted-color);
+}
+
+.tips-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.tip-card {
+    padding: 1.75rem;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.tip-card h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.tip-card p {
+    color: var(--muted-color);
+}
+
+.tip-card ul {
+    padding-left: 1.25rem;
+}
+
+.tip-card li {
+    margin-bottom: 0.5rem;
+}
+
+.tips-notice {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    padding: 1.5rem;
+    width: 90%;
+    background-color: #e4f2f5;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 6px;
+}
+
+.tips-notice h2 {
+    font-size: 1.35rem;
+}
+
+.tips-notice p {
+    margin-bottom: 0;
+}
+
+body.dark-mode .page-heading,
+body.dark-mode .tips-notice {
+    background-color: #203b47;
+}
+
+@media (min-width: 700px) {
+    .tips-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Fish Feeding Calculator */
+.calculator-section {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 2rem 5%;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.calculator-section > h2,
+.calculator-section > p {
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    font-weight: 700;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font: inherit;
+}
+
+.form-group input:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.calculator-result {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    overflow-wrap: anywhere;
+}
+
+.calculator-result:empty {
+    display: none;
+}
+
+.calculator-result p {
+    margin-bottom: 0.5rem;
+}
+
+.calculator-disclaimer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--muted-color);
+}
+
+body.dark-mode .calculator-result {
+    border: 1px solid var(--border-color);
+}
+/* Fish Stock Tracker */
+.stock-section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem 5%;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.stock-section h2 {
+    font-size: 1.5rem;
+}
+
+.stock-section select,
+.stock-section input {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font: inherit;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.stock-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.stock-section th,
+.stock-section td {
+    padding: 0.9rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stock-section th {
+    background-color: var(--background-color);
+}
+
+.stock-section td button {
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #b42318;
+    color: white;
+    cursor: pointer;
+}
+
+#stock-message {
+    margin-top: 1rem;
+}
+
+#stock-summary {
+    font-weight: 700;
+}
+
+body.dark-mode .stock-section th {
+    background-color: #263b45;
+}
+/* Contact and Reviews */
+.contact-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.contact-section,
+.review-section,
+.reviews-display {
+    padding: 1.75rem;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.contact-section h2,
+.review-section h2,
+.reviews-display h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section textarea,
+.review-section textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font: inherit;
+    resize: vertical;
+}
+
+.contact-section input,
+.review-section input[type="text"],
+.review-section input[type="email"] {
+    width: 100%;
+}
+
+.rating-fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.rating-fieldset legend {
+    padding: 0 0.4rem;
+    font-weight: 700;
+}
+
+.rating-options {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0.4rem;
+}
+
+.rating-options input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.rating-options label {
+    color: #aab5ba;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.rating-options label:hover,
+.rating-options label:hover ~ label,
+.rating-options input:checked ~ label {
+    color: #f4b400;
+}
+
+.rating-options input:focus-visible + label {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+.reviews-display {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    width: 90%;
+}
+
+.review-card {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.review-card:last-child {
+    border-bottom: none;
+}
+
+.review-card h3 {
+    margin-bottom: 0.4rem;
+}
+
+.review-stars {
+    color: #d99500;
+    letter-spacing: 2px;
+}
+
+.review-date {
+    color: var(--muted-color);
+    font-size: 0.9rem;
+}
+
+body.dark-mode .contact-section,
+body.dark-mode .review-section,
+body.dark-mode .reviews-display {
+    background-color: var(--white-color);
+}
+
+@media (min-width: 800px) {
+    .contact-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+    }
+}
+/* References Page */
+.references-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 5%;
+}
+
+.reference-card {
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.reference-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.reference-card p {
+    color: var(--muted-color);
+}
+
+.reference-card a {
+    display: inline-block;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.reference-reminder {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    background-color: #e4f2f5;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 6px;
+}
+
+body.dark-mode .reference-reminder {
+    background-color: #203b47;
+}

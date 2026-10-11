@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Learn about fish feeding, water quality, fish health, and fish farm management."
+    >
+
+    <meta name="author" content="Precious Fabiyi">
+
+    <title>Fish Farming Tips | Fish Farmers Hub</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">🐟 Fish Farmers Hub</a>
+
+            <button
+                id="menu-button"
+                class="menu-button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+                ☰
+            </button>
+
+            <nav id="primary-navigation" class="navigation">
+                <a href="index.html">Home</a>
+                <a href="tips.html" class="active">Farming Tips</a>
+                <a href="contact.html">Contact & Reviews</a>
+                <a href="references.html">References</a>
+            </nav>
+
+            <button
+                id="theme-toggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Switch to dark mode"
+            >
+                🌙 Dark Mode
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-heading">
+            <h1>Fish Farming Tips</h1>
+
+            <p>
+                Discover practical ways to care for your fish
+                and manage your farm.
+            </p>
+        </section>
+<section class="calculator-section" id="calculator">
+    <h2>Fish Feeding Calculator</h2>
+
+    <p>
+        Estimate daily feed requirements using the total weight
+        of your fish and a feeding-rate percentage recommended
+        for your farming conditions.
+    </p>
+
+    <form id="feed-calculator">
+        <div class="form-group">
+            <label for="fish-count">Number of fish</label>
+            <input
+                type="number"
+                id="fish-count"
+                min="1"
+                step="1"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="average-weight">
+                Average weight per fish (grams)
+            </label>
+            <input
+                type="number"
+                id="average-weight"
+                min="0.1"
+                step="0.1"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="feeding-rate">
+                Feeding rate (% of total fish weight)
+            </label>
+            <input
+                type="number"
+                id="feeding-rate"
+                min="0.1"
+                max="10"
+                step="0.1"
+                value="3"
+                required
+            >
+        </div>
+
+        <button type="submit" class="button">
+            Calculate Daily Feed
+        </button>
+    </form>
+
+    <div
+        id="calculator-result"
+        class="calculator-result"
+        aria-live="polite"
+    ></div>
+
+    <p class="calculator-disclaimer">
+        This calculator provides an estimate, not a feeding prescription.
+        Confirm a suitable feeding rate with reliable aquaculture guidance.
+    </p>
+</section>
+        <section class="tips-container">
+            <article class="tip-card">
+                <h2>🐟 Feeding Practices</h2>
+
+                <p>
+                    Good feeding practices support healthy fish growth.
+                    Choose suitable feed for the species and growth stage
+                    you are raising.
+                </p>
+
+                <ul>
+                    <li>Use feed appropriate for your fish species.</li>
+                    <li>Follow the feed manufacturer's guidance.</li>
+                    <li>Observe feeding behaviour and adjust as needed.</li>
+                    <li>Remove uneaten feed where practical.</li>
+                </ul>
+            </article>
+
+            <article class="tip-card">
+                <h2>💧 Water Quality</h2>
+
+                <p>
+                    Water quality affects fish health, feeding, and survival.
+                    Monitor your pond or tank conditions regularly.
+                </p>
+
+                <ul>
+                    <li>Monitor temperature and dissolved oxygen.</li>
+                    <li>Check pH and other relevant water parameters.</li>
+                    <li>Watch for unusual changes in fish behaviour.</li>
+                    <li>Maintain suitable water conditions for your species.</li>
+                </ul>
+            </article>
+
+            <article class="tip-card" id="management">
+                <h2>📋 Fish Farm Management</h2>
+
+                <p>
+                    Keeping accurate records helps you understand
+                    how your farm is performing.
+                </p>
+
+                <ul>
+                    <li>Record the number of fish stocked.</li>
+                    <li>Track feed purchases and feeding activities.</li>
+                    <li>Record fish deaths and unusual observations.</li>
+                    <li>Review growth and farm expenses regularly.</li>
+                </ul>
+            </article>
+
+            <article class="tip-card">
+                <h2>🩺 Fish Health</h2>
+
+                <p>
+                    Early observation can help you identify problems
