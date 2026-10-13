@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Explore fish species and available seafood sustainability assessments with Fish Farmers Hub."
+    >
+
+    <title>Fish Species Guide | Fish Farmers Hub</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/script.js" defer></script>
+    <script src="js/fishGuide.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">🐟 Fish Farmers Hub</a>
+
+            <button
+                id="menu-button"
+                class="menu-button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+                ☰
+            </button>
+
+            <nav id="primary-navigation" class="navigation">
+                <a href="index.html" class="active">Home</a>
+                <a href="tips.html">Farming Tips</a>
+                <a href="stock.html">Stock Tracker</a>
+                <a href="contact.html">Contact & Reviews</a>
+                <a href="references.html">References</a>
+                <a href="weather.html">Farm Weather</a>
+            </nav>
+            <button
+    id="theme-toggle"
+    class="theme-toggle"
+    type="button"
+    aria-label="Switch to dark mode"
+>
+    🌙 Dark Mode
+</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Fish Species Guide</h2>
+
+            <p>
+                Search available fish assessments to learn about species
+                and their reported seafood sustainability ratings.
+            </p>
+
+            <form id="fish-search-form">
+                <label for="fish-search">Search for a fish species</label>
+
+                <input
+                    type="search"
+                    id="fish-search"
+                    name="fish"
+                    placeholder="e.g. Salmon"
+                    required
+                >
+
+                <button type="submit">Search Fish</button>
+            </form>
+
+            <p id="fish-status" role="status" aria-live="polite">
+                Enter a species name to begin your search.
+            </p>
+
+            <div id="fish-results" aria-live="polite"></div>
+        </section>
+
+        <section>
+            <h2>About These Assessments</h2>
+
+            <p>
+                Seafood Watch provides seafood recommendations based on
+                environmental sustainability assessments. Results may
+                describe particular fisheries, farming methods, or regions.
+            </p>
+
+            <p>
+                A rating for one fishery should not be treated as a rating
+                for every farm or location where that species is raised.
+            </p>
+
+            <p>
+                <a
+                    href="https://www.seafoodwatch.org/recommendations"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visit Seafood Watch Recommendations
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="current-year"></span> Fish Farmers Hub
+        </p>
+    </footer>
+</body>
+</html>

@@ -755,3 +755,204 @@ body.dark-mode .reviews-display {
 body.dark-mode .reference-reminder {
     background-color: #203b47;
 }
+/* ===== Farm Weather Page ===== */
+
+#weather-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+#weather-location {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    min-width: 220px;
+}
+
+#weather-form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#weather-form button:hover {
+    background-color: var(--primary-dark);
+}
+
+#weather-results {
+    display: grid;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+#weather-results article {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+#weather-status {
+    margin-top: 15px;
+    color: var(--text-color);
+}
+
+@media (max-width: 600px) {
+    #weather-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #weather-location {
+        min-width: 0;
+        width: 100%;
+    }
+}
+/* Weather result cards */
+
+#weather-results .weather-card {
+    padding: 24px;
+    margin: 10px 0;
+    background: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#weather-results .weather-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 60, 80, 0.14);
+}
+
+#weather-results .current-weather h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+#weather-results .current-weather {
+    border-left: 5px solid var(--secondary-color);
+}
+
+#weather-results .forecast-card h4 {
+    margin-top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #weather-results .weather-card {
+        transition: none;
+    }
+
+    #weather-results .weather-card:hover {
+        transform: none;
+    }
+}
+
+/* =================================
+   FISH SPECIES GUIDE
+================================= */
+
+#fish-search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: end;
+    margin: 25px 0;
+    padding: 24px;
+    background: var(--white-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+#fish-search-form label {
+    width: 100%;
+    font-weight: 600;
+}
+
+#fish-search {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font: inherit;
+}
+
+#fish-search-form button {
+    padding: 12px 20px;
+    color: white;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#fish-search-form button:hover {
+    background: var(--primary-dark);
+}
+
+#fish-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.fish-card {
+    padding: 22px;
+    background: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.fish-card:hover {
+    transform: translateY(-4px);
+}
+
+.fish-card h3 {
+    color: var(--primary-color);
+}
+
+.fish-card p {
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    #fish-search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #fish-search {
+        width: 100%;
+    }
+
+    #fish-search-form button {
+        width: 100%;
+    }
+
+    #fish-results {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fish-card {
+        transition: none;
+    }
+
+    .fish-card:hover {
+        transform: none;
+    }
+}

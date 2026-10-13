@@ -1,0 +1,37 @@
+[
+  {
+    "commonName": "Atlantic Salmon",
+    "scientificName": "Salmo salar",
+    "group": "Salmon",
+    "rating": "Check current assessment",
+    "description": "Sustainability depends on the farming method, fishery, and location."
+  },
+  {
+    "commonName": "Nile Tilapia",
+    "scientificName": "Oreochromis niloticus",
+    "group": "Tilapia",
+    "rating": "Check current assessment",
+    "description": "A widely farmed freshwater fish. Environmental impacts depend on farming practices."
+  },
+  {
+    "commonName": "African Catfish",
+    "scientificName": "Clarias gariepinus",
+    "group": "Catfish",
+    "rating": "Check current assessment",
+    "description": "An important aquaculture species in Nigeria. Sustainability depends on feed, water management, and farm practices."
+  },
+  {
+    "commonName": "Common Carp",
+    "scientificName": "Cyprinus carpio",
+    "group": "Carp",
+    "rating": "Check current assessment",
+    "description": "A freshwater fish farmed in many regions. Environmental impacts vary by production system."
+  },
+  {
+    "commonName": "Rainbow Trout",
+    "scientificName": "Oncorhynchus mykiss",
+    "group": "Trout",
+    "rating": "Check current assessment",
+    "description": "A farmed freshwater fish whose sustainability depends on feed, water conditions, and production methods."
+  }
+]

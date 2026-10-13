@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Check current weather conditions and forecasts to help manage your fish farm."
+    >
+
+    <title>Farm Weather | Fish Farmers Hub</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/script.js" defer></script>
+    <script src="js/weather.js" defer></script>
+</head>
+
+<body>
+   <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">🐟 Fish Farmers Hub</a>
+
+            <button
+                id="menu-button"
+                class="menu-button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+                ☰
+            </button>
+
+            <nav id="primary-navigation" class="navigation">
+                <a href="index.html" class="active">Home</a>
+                <a href="tips.html">Farming Tips</a>
+                <a href="stock.html">Stock Tracker</a>
+                <a href="contact.html">Contact & Reviews</a>
+                <a href="references.html">References</a>
+                <a href="weather.html">Farm Weather</a>
+            </nav>
+            <button
+    id="theme-toggle"
+    class="theme-toggle"
+    type="button"
+    aria-label="Switch to dark mode"
+>
+    🌙 Dark Mode
+</button>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+            <h2>Farm Weather</h2>
+
+            <p>
+                Check weather conditions before carrying out important
+                activities on your fish farm.
+            </p>
+
+            <form id="weather-form">
+                <label for="weather-location">
+                    Enter a city or location
+                </label>
+
+                <input
+                    type="text"
+                    id="weather-location"
+                    name="location"
+                    placeholder="e.g. Lagos, Nigeria"
+                    required
+                >
+
+                <button type="submit">Check Weather</button>
+            </form>
+
+            <p id="weather-status" role="status" aria-live="polite">
+                Enter a location to check the weather.
+            </p>
+
+            <div id="weather-results" aria-live="polite"></div>
+        </section>
+
+        <section>
+            <h2>Weather and Fish Farming</h2>
+
+            <p>
+                Monitor temperature, rainfall, and other weather conditions
+                when planning feeding, pond maintenance, and water management.
+            </p>
+
+            <p>
+                Remember that outdoor weather conditions do not necessarily
+                represent the temperature or water quality inside your pond.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="current-year"></span> Fish Farmers Hub
+        </p>
+    </footer>
+</body>
+</html>
